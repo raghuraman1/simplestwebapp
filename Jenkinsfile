@@ -4,7 +4,7 @@ pipeline {
     stage('Source') { // Get code
       steps {
         // get code from our Git repository
-        checkout scm
+        git branch: 'main', url: 'https://github.com/raghuraman1/simplestwebapp.git'
       }
     }
     stage('Build') { // Compile and do unit testing
