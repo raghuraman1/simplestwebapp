@@ -13,7 +13,7 @@ pipeline {
       }
       steps {
         // run maven
-        'mvn clean package'
+        bat 'mvn clean package'
       }
     }
   }
