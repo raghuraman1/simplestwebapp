@@ -22,7 +22,7 @@ pipeline {
     stage('Deploy') { // deploy
 
       steps {
-       deploy adapters: [tomcat9(credentialsId: 'tomcatmgr', path: '', url: 'http://localhost:8080/')], contextPath: 'simplestwebapp', war: '**/*.war'
+       deploy adapters: [tomcat9(credentialsId: 'tomcatmgr', path: '', url: 'http://34.222.81.221:8080/')], contextPath: 'simplestwebapp', war: '**/*.war'
       }
     }
   }
