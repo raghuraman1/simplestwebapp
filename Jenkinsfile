@@ -18,5 +18,12 @@ pipeline {
         bat 'mvn clean package'
       }
     }
+    
+    stage('Deploy') { // deploy
+
+      steps {
+       deploy adapters: [tomcat9(credentialsId: '	tomcatmgr', path: '', url: 'http://localhost:8080/')], contextPath: 'simplestwebapp', war: '**/*.war'
+      }
+    }
   }
 }
