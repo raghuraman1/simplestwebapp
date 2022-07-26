@@ -1,1 +1,3 @@
 # simplestwebapp
+
+Declarative pipleine demo
