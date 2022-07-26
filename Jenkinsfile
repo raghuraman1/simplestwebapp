@@ -30,7 +30,7 @@ pipeline {
 
       steps {
       withAWS(region:'us-west-2', credentials:'myawscheckapicreds') {
-       		deployAPI(api:'myApiIdRRRXyzasd', stage:'Prod')
+       		deployAPI(api:'f8sux3hruk', stage:'Prod')
        }
       }
     }
