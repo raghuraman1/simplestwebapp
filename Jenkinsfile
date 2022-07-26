@@ -22,7 +22,16 @@ pipeline {
     stage('Deploy') { // deploy
 
       steps {
-       deploy adapters: [tomcat9(credentialsId: 'awstomcatmghr', path: '', url: 'http://18.237.35.38:8080/')], contextPath: 'simplestwebapp', war: '**/*.war'
+       deploy adapters: [tomcat9(credentialsId: 'tomcatmgr', path: '', url: 'http://localhost:8080/')], contextPath: 'simplestwebapp', war: '**/*.war'
+      }
+    }
+    
+     stage('apigateway') { // deploy
+
+      steps {
+      withAWS(region:'us-west-2', credentials:'myawscheckapicreds') {
+       		deployAPI(api:'myApiId', stage:'Prod')
+       }
       }
     }
   }
