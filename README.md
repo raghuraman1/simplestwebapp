@@ -1,4 +1,4 @@
 # simplestwebapp
 ```diff
-! Declarative pipleine demo
+! **Declarative pipleine demo**
 ```
